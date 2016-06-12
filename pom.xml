@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>me.MiniDigger.RideThaMob</groupId>
-    <artifactId>RideThaMob-parent</artifactId>
+    <artifactId>arent</artifactId>
     <version>3.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>RideThaMob</name>
+    <name>RideThaMob Parent</name>
 
     <modules>
         <module>API</module>
