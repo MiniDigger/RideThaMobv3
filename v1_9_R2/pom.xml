@@ -8,9 +8,16 @@
         <artifactId>RideThaMob</artifactId>
         <groupId>me.MiniDigger.RideThaMob</groupId>
         <version>3.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
+
     <artifactId>v1_9_R2</artifactId>
-    <version>3.0-SNAPSHOT</version>
+    <name>RideThaMob v1_9_R2</name>
+    <packaging>jar</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
     <dependencies>
         <dependency>
