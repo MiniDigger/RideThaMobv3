@@ -4,12 +4,14 @@ import me.MiniDigger.RideThaMob.api.FancyMessageSender;
 import me.MiniDigger.RideThaMob.api.NMSHandler;
 import me.MiniDigger.RideThaMob.api.RideThaMob;
 import me.MiniDigger.RideThaMob.fanciful.FancyMessage;
+import me.MiniDigger.RideThaMob.v1_10_R1.fancyful.FancyMessageSender_v1_10_R1;
+import me.MiniDigger.RideThaMob.v1_10_R1.util.NMSHandler_1_10_R1;
+import me.MiniDigger.RideThaMob.v1_8_R3.fancyful.FancyMessageSender_v1_8_R3;
+import me.MiniDigger.RideThaMob.v1_8_R3.util.NMSHandler_1_8_R3;
 import me.MiniDigger.RideThaMob.v1_9_R1.fancyful.FancyMessageSender_v1_9_R1;
 import me.MiniDigger.RideThaMob.v1_9_R1.util.NMSHandler_1_9_R1;
 import me.MiniDigger.RideThaMob.v1_9_R2.fancyful.FancyMessageSender_v1_9_R2;
 import me.MiniDigger.RideThaMob.v1_9_R2.util.NMSHandler_1_9_R2;
-import me.MiniDigger.RideThaMob.v1_10_R1.fancyful.FancyMessageSender_v1_10_R1;
-import me.MiniDigger.RideThaMob.v1_10_R1.util.NMSHandler_1_10_R1;
 import org.apache.commons.lang.ArrayUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -21,7 +23,7 @@ import java.util.regex.Pattern;
 
 public class RideThaMobPlugin extends JavaPlugin implements Listener, RideThaMob {
 
-    public static final String[] supportedVersions = { "v1_9_R1", "v1_9_R2", "v1_10_R1" };
+    public static final String[] supportedVersions = { "v1_8_R3", "v1_9_R1", "v1_9_R2", "v1_10_R1" };
 
     private static RideThaMobPlugin INSTANCE;
 
@@ -96,6 +98,10 @@ public class RideThaMobPlugin extends JavaPlugin implements Listener, RideThaMob
 
         if ( ArrayUtils.contains( supportedVersions, nmsVersion ) ) {
             switch ( nmsVersion ) {
+                case "v1_8_R3":
+                    fancyMessageSender = new FancyMessageSender_v1_8_R3();
+                    nmsHandler = new NMSHandler_1_8_R3( this );
+                    break;
                 case "v1_9_R1":
                     fancyMessageSender = new FancyMessageSender_v1_9_R1();
                     nmsHandler = new NMSHandler_1_9_R1( this );
