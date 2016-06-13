@@ -1,4 +1,4 @@
-#RideThaMobv2 [![Build Status](https://travis-ci.org/MiniDigger/RideThaMobv3.svg?branch=master)](https://travis-ci.org/MiniDigger/RideThaMobv3)
+#RideThaMobv2
 
 This is the successor of [RideThaMobv2](https://github.com/MiniDigger/RideThaMobv2)
 
