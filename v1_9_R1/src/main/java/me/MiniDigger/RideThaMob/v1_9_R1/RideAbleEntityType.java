@@ -172,4 +172,13 @@ public enum RideAbleEntityType {
 
         return registeredEntityTypes;
     }
+
+    public static RideAbleEntityType valueOf( EntityType type ) {
+        for ( final RideAbleEntityType entity : values() ) {
+            if ( entity.getEntityType().equals( type ) ) {
+                return entity;
+            }
+        }
+        return null;
+    }
 }

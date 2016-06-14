@@ -24,6 +24,24 @@ public class RideThaMobCommands implements CommandExecutor {
                     case "reload":
                         reload( sender );
                         return true;
+                    case "spawn":
+                        if ( !( sender instanceof Player ) ) {
+                            //TODO msg
+                            return true;
+                        }
+                        if ( args.length != 2 ) {
+                            //TODO msg
+                            return true;
+                        }
+                        EntityType type;
+                        try {
+                            type = EntityType.valueOf( args[1] );
+                        } catch ( IllegalArgumentException e ) {
+                            //TODO msg
+                            return true;
+                        }
+                        boolean r = RideThaMobPlugin.getInstance().getNMSHanlder().spawn( type, ( (Player) sender ).getLocation() );
+                        System.out.println( "spawned " + r );
                 }
 
         }
