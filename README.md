@@ -7,6 +7,9 @@ This is the 3rd (and hopefully last) iteration of my mob riding plugin called Ri
 This plugin allows you to ride on all mobs that are in the game.
 The speed (forwards, sidewards and backwards is configureable. You can even change how high the mob is able to climb blocks (kinda like spiders) 
 
+You can download a development version [here](http://bender.minidigger.me:9090/job/RideThaMob/lastSuccessfulBuild/artifact/target/RideThaMob.jar) 
+Note: this version is build from the latest changes and could break horribly. Use at your own risk! 
+
 # This Plugin is currently work in progress and should not be used yet!
 
 # Supported Versions
