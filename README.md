@@ -11,10 +11,10 @@ The speed (forwards, sidewards and backwards is configureable. You can even chan
 
 # Supported Versions
 These nms versions are currently supported:
-* v1_8_R3
-* v1_9_R1
-* v1_9_R2
-* v1_10_R1
+* v1_8_R3 (Spigot 1.8.8)
+* v1_9_R1 (Spigot 1.9.2)
+* v1_9_R2 (Spigot 1.9.4)
+* v1_10_R1 (Spigot 1.10)
  
 Your version isn't here? Create an issue and I will look into adding it!
 
