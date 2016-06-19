@@ -1,4 +1,4 @@
-#RideThaMobv2 [![Build Status](http://bender.minidigger.me:9090/job/RideThaMob/badge/icon)](http://bender.minidigger.me:9090/job/RideThaMob/)
+#RideThaMobv3 [![Build Status](http://bender.minidigger.me:9090/job/RideThaMob/badge/icon)](http://bender.minidigger.me:9090/job/RideThaMob/)
 
 This is the successor of [RideThaMobv2](https://github.com/MiniDigger/RideThaMobv2)
 
