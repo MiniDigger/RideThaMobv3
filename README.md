@@ -1,11 +1,11 @@
 #RideThaMobv3 [![Build Status](http://bender.minidigger.me:9090/job/RideThaMob/badge/icon)](http://bender.minidigger.me:9090/job/RideThaMob/)
 
-This is the successor of [RideThaMobv2](https://github.com/MiniDigger/RideThaMobv2)
+This is the successor of [RideThaMobv2](https://github.com/MiniDigger/RideThaMobv2).
 
 This is the 3rd (and hopefully last) iteration of my mob riding plugin called RideThaMob.
 
 This plugin allows you to ride on all mobs that are in the game.
-The speed (forwards, sidewards and backwards is configureable. You can even change how high the mob is able to climb blocks (kinda like spiders) 
+The speed (forwards, sidewards and backwards is configureable. You can even change how high the mob is able to climb blocks (kinda like spiders).
 
 You can download a development version [here](http://bender.minidigger.me:9090/job/RideThaMob/lastSuccessfulBuild/artifact/target/RideThaMob.jar)
  
