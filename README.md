@@ -26,4 +26,4 @@ Your version isn't here? Create an issue and I will look into adding it!
 * Spigot Resource Page: https://www.spigotmc.org/resources/ridethamob.2043/
 * Bukkit Plugin Page:  http://dev.bukkit.org/bukkit-plugins/ridethamob
 * Curse Mod Page: http://mods.curse.com/bukkit-plugins/minecraft/ridethamob
-* CI: http://bender.minidigger.me:9090/job/RideThaMob/
+* CI: http://ci.minidigger.me/job/RideThaMob/
