@@ -153,36 +153,4 @@ public class RideThaMobPlugin extends JavaPlugin implements Listener, RideThaMob
     public static RideThaMobPlugin getInstance() {
         return INSTANCE;
     }
-
- /*   public void test() {
-        int i = 0;
-        List<String> keys = new ArrayList<>();
-        Player p = null;
-
-        //first
-        ComponentBuilder builder = new ComponentBuilder( i + ". " );
-        builder.color( net.md_5.bungee.api.ChatColor.YELLOW ).bold( true );
-
-        //event
-        builder.event( new ClickEvent( ClickEvent.Action.RUN_COMMAND,"f who " + keys.get(i)));
-        TextComponent hover = getHover(keys.get(i),values.get(i));
-        builder.event( new HoverEvent(HoverEvent.Action.SHOW_TEXT, new BaseComponent[] {hover}));
-
-        //faction
-        builder.append( keys.get( i ) );
-        if ( true ) {
-            builder.color( net.md_5.bungee.api.ChatColor.WHITE );
-        } else {
-            builder.color( net.md_5.bungee.api.ChatColor.RED );
-        }
-
-        //second
-        builder.append( " - " ).color( net.md_5.bungee.api.ChatColor.RESET );
-
-        //third
-        builder.append( "$" + "smth" ).color( net.md_5.bungee.api.ChatColor.YELLOW ).bold( true );
-
-        //send
-        p.spigot().sendMessage( builder.create() );
-    }*/
 }
