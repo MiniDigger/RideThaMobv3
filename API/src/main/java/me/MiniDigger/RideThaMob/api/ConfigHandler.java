@@ -10,22 +10,22 @@ public interface ConfigHandler {
 
     void save();
 
-    double getRideSpeed( EntityType e );
+    double getRideSpeed(EntityType e);
 
-    double getJumpHeight( EntityType e );
+    double getJumpHeight(EntityType e);
 
     //TODO implement flying
-    boolean getFly( EntityType e );
+    boolean getFly(EntityType e);
 
-    double getSidewaysMod( EntityType e );
+    double getSidewaysMod(EntityType e);
 
-    double getBackwardsMod( EntityType e );
+    double getBackwardsMod(EntityType e);
 
-    double getStepHeight( EntityType e );
+    double getStepHeight(EntityType e);
 
     int getRtmRange();
 
-    boolean isRideAble( EntityType e );
+    boolean isRideAble(EntityType e);
 
     FileConfiguration getConfig();
 }

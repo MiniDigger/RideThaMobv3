@@ -13,8 +13,8 @@ import java.util.Map;
  * https://gist.github.com/Funergy/b9aafce348a5bbfa6716
  */
 public class NMSUtils {
-    public static void registerEntity( final String name, final int id, final Class<? extends EntityInsentient> nmsClass,
-                                       final Class<? extends EntityInsentient> customClass ) {
+    public static void registerEntity(final String name, final int id, final Class<? extends EntityInsentient> nmsClass,
+                                      final Class<? extends EntityInsentient> customClass) {
         try {
 
 			/*
@@ -25,31 +25,31 @@ public class NMSUtils {
 			 * on.
 			 */
             final List<Map<?, ?>> dataMaps = new ArrayList<Map<?, ?>>();
-            for ( final Field f : EntityTypes.class.getDeclaredFields() ) {
-                if ( f.getType().getSimpleName().equals( Map.class.getSimpleName() ) ) {
-                    f.setAccessible( true );
-                    dataMaps.add( (Map<?, ?>) f.get( null ) );
+            for (final Field f : EntityTypes.class.getDeclaredFields()) {
+                if (f.getType().getSimpleName().equals(Map.class.getSimpleName())) {
+                    f.setAccessible(true);
+                    dataMaps.add((Map<?, ?>) f.get(null));
                 }
             }
 
 			/*
-			 * since minecraft checks if an id has already been registered, we
+             * since minecraft checks if an id has already been registered, we
 			 * have to remove the old entity class before we can register our
 			 * custom one
 			 * map 0 is the map with names and map 2 is the map with ids
 			 */
-            if ( dataMaps.get( 2 ).containsKey( id ) ) {
-                dataMaps.get( 0 ).remove( name );
-                dataMaps.get( 2 ).remove( id );
+            if (dataMaps.get(2).containsKey(id)) {
+                dataMaps.get(0).remove(name);
+                dataMaps.get(2).remove(id);
             }
 
 			/*
 			 * now we call the method which adds the entity to the lists in the
 			 * EntityTypes class, now we are actually 'registering' our entity
 			 */
-            final Method method = EntityTypes.class.getDeclaredMethod( "a", Class.class, String.class, int.class );
-            method.setAccessible( true );
-            method.invoke( null, customClass, name, id );
+            final Method method = EntityTypes.class.getDeclaredMethod("a", Class.class, String.class, int.class);
+            method.setAccessible(true);
+            method.invoke(null, customClass, name, id);
 
             // TODO below part is broken in 1.8...
 			/*
@@ -100,7 +100,7 @@ public class NMSUtils {
             // }
             // }
 
-        } catch ( final Exception e ) {
+        } catch (final Exception e) {
             e.printStackTrace();
         }
     }

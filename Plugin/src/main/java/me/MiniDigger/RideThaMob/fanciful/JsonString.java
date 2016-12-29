@@ -1,6 +1,7 @@
 package me.MiniDigger.RideThaMob.fanciful;
 
 import com.google.gson.stream.JsonWriter;
+
 import org.bukkit.configuration.serialization.ConfigurationSerializable;
 
 import java.io.IOException;
@@ -16,13 +17,13 @@ final class JsonString implements JsonRepresentedObject, ConfigurationSerializab
 
     private final String _value;
 
-    public JsonString( final CharSequence value ) {
+    public JsonString(final CharSequence value) {
         _value = value == null ? null : value.toString();
     }
 
     @Override
-    public void writeJson( final JsonWriter writer ) throws IOException {
-        writer.value( getValue() );
+    public void writeJson(final JsonWriter writer) throws IOException {
+        writer.value(getValue());
     }
 
     public String getValue() {
@@ -32,12 +33,12 @@ final class JsonString implements JsonRepresentedObject, ConfigurationSerializab
     @Override
     public Map<String, Object> serialize() {
         final HashMap<String, Object> theSingleValue = new HashMap<String, Object>();
-        theSingleValue.put( "stringValue", _value );
+        theSingleValue.put("stringValue", _value);
         return theSingleValue;
     }
 
-    public static JsonString deserialize( final Map<String, Object> map ) {
-        return new JsonString( map.get( "stringValue" ).toString() );
+    public static JsonString deserialize(final Map<String, Object> map) {
+        return new JsonString(map.get("stringValue").toString());
     }
 
     @Override

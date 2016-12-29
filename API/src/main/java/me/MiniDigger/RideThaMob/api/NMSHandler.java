@@ -5,7 +5,7 @@ import org.bukkit.entity.EntityType;
 
 public interface NMSHandler {
 
-    boolean spawn( EntityType type, Location location );
+    boolean spawn(EntityType type, Location location);
 
     void registerEntites();
 
