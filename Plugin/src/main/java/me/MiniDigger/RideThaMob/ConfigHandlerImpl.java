@@ -91,6 +91,11 @@ public class ConfigHandlerImpl implements ConfigHandler {
         }
     }
 
+    @Override
+    public YamlConfiguration getConfig() {
+        return config;
+    }
+
     /*
      * Getters
      */

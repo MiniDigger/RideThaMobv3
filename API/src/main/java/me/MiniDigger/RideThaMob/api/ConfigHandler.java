@@ -1,5 +1,6 @@
 package me.MiniDigger.RideThaMob.api;
 
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.EntityType;
 
 public interface ConfigHandler {
@@ -25,4 +26,6 @@ public interface ConfigHandler {
     int getRtmRange();
 
     boolean isRideAble( EntityType e );
+
+    FileConfiguration getConfig();
 }

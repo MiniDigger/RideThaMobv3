@@ -63,12 +63,12 @@ public class RideThaMobCommands implements CommandExecutor {
 
                 if ( RideThaMobPlugin.getInstance().getConfigHandler().isRideAble( e.getType() ) ) {
                     e.setPassenger( sender );
-                    //Lang.msg(sender, RTMLangKey.RIDE, e.getType().name());
+                    Lang.msg( sender, Lang.LangKey.RIDE, e.getType().name() );
                     return;
                 }
             }
         }
-        // Lang.msg(sender, RTMLangKey.NO_NEAR);
+        Lang.msg( sender, Lang.LangKey.NO_NEAR, RideThaMobPlugin.getInstance().getConfigHandler().getRtmRange() + "" );
     }
 
     public void reload( final CommandSender sender ) {

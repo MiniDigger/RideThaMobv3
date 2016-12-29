@@ -2,6 +2,7 @@ name: Ridethamob
 version: 3.0-SNAPSHOT
 main: me.MiniDigger.RideThaMob.RideThaMobPlugin
 prefix: RTM
+load: STARTUP
 authors: [MiniDigger]
 commands:
     rtm:
