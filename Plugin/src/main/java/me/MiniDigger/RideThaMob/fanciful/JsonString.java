@@ -1,12 +1,11 @@
 package me.MiniDigger.RideThaMob.fanciful;
 
+import com.google.gson.stream.JsonWriter;
+import org.bukkit.configuration.serialization.ConfigurationSerializable;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-
-import com.google.gson.stream.JsonWriter;
-
-import org.bukkit.configuration.serialization.ConfigurationSerializable;
 
 /**
  * Represents a JSON string value.
@@ -14,35 +13,35 @@ import org.bukkit.configuration.serialization.ConfigurationSerializable;
  * All writes merely write the represented string value.
  */
 final class JsonString implements JsonRepresentedObject, ConfigurationSerializable {
-	
-	private final String _value;
 
-	public JsonString(final CharSequence value) {
-		_value = value == null ? null : value.toString();
-	}
+    private final String _value;
 
-	@Override
-	public void writeJson(final JsonWriter writer) throws IOException {
-		writer.value(getValue());
-	}
+    public JsonString( final CharSequence value ) {
+        _value = value == null ? null : value.toString();
+    }
 
-	public String getValue() {
-		return _value;
-	}
+    @Override
+    public void writeJson( final JsonWriter writer ) throws IOException {
+        writer.value( getValue() );
+    }
 
-	@Override
-	public Map<String, Object> serialize() {
-		final HashMap<String, Object> theSingleValue = new HashMap<String, Object>();
-		theSingleValue.put("stringValue", _value);
-		return theSingleValue;
-	}
+    public String getValue() {
+        return _value;
+    }
 
-	public static JsonString deserialize(final Map<String, Object> map) {
-		return new JsonString(map.get("stringValue").toString());
-	}
+    @Override
+    public Map<String, Object> serialize() {
+        final HashMap<String, Object> theSingleValue = new HashMap<String, Object>();
+        theSingleValue.put( "stringValue", _value );
+        return theSingleValue;
+    }
 
-	@Override
-	public String toString() {
-		return _value;
-	}
+    public static JsonString deserialize( final Map<String, Object> map ) {
+        return new JsonString( map.get( "stringValue" ).toString() );
+    }
+
+    @Override
+    public String toString() {
+        return _value;
+    }
 }

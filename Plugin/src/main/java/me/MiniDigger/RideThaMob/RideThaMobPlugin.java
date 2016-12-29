@@ -4,6 +4,7 @@ import me.MiniDigger.RideThaMob.api.FancyMessageSender;
 import me.MiniDigger.RideThaMob.api.NMSHandler;
 import me.MiniDigger.RideThaMob.api.RideThaMob;
 import me.MiniDigger.RideThaMob.fanciful.FancyMessage;
+import me.MiniDigger.RideThaMob.tools.GenClasses;
 import me.MiniDigger.RideThaMob.v1_10_R1.fancyful.FancyMessageSender_v1_10_R1;
 import me.MiniDigger.RideThaMob.v1_10_R1.util.NMSHandler_1_10_R1;
 import me.MiniDigger.RideThaMob.v1_8_R3.fancyful.FancyMessageSender_v1_8_R3;
@@ -17,14 +18,11 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitRunnable;
 
 import java.io.File;
 import java.util.regex.Pattern;
 
 public class RideThaMobPlugin extends JavaPlugin implements Listener, RideThaMob {
-
-    public static final String[] supportedVersions = { "v1_8_R3", "v1_9_R1", "v1_9_R2", "v1_10_R1" };
 
     private static RideThaMobPlugin INSTANCE;
 
@@ -97,7 +95,7 @@ public class RideThaMobPlugin extends JavaPlugin implements Listener, RideThaMob
     public boolean enableNMSHandler() {
         getLogger().info( "Found server version " + nmsVersion );
 
-        if ( ArrayUtils.contains( supportedVersions, nmsVersion ) ) {
+        if ( ArrayUtils.contains( GenClasses.supportedVersions, nmsVersion ) ) {
             switch ( nmsVersion ) {
                 case "v1_8_R3":
                     fancyMessageSender = new FancyMessageSender_v1_8_R3();

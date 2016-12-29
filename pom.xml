@@ -17,19 +17,20 @@
         <module>v1_9_R2</module>
         <module>v1_10_R1</module>
         <module>v1_8_R3</module>
+        <module>tools</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    
+
     <repositories>
         <repository>
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
     </repositories>
-    
+
     <build>
         <defaultGoal>clean package install</defaultGoal>
         <finalName>${project.name}</finalName>

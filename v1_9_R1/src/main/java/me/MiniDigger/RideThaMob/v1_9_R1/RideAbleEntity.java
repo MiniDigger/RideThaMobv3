@@ -66,12 +66,12 @@ public class RideAbleEntity extends EntitySkeleton {
         // set yaw pitch
         this.lastYaw = this.yaw = entityliving.yaw;
         this.pitch = entityliving.pitch * 0.5F;
-        this.setYawPitch(this.yaw, this.pitch);
+        this.setYawPitch( this.yaw, this.pitch );
         // NMS a0, aM
         this.aO = this.aM = this.yaw;
 
         // NMS: set sideMod
-        f = (float) (entityliving.bd * sidewaysMod);
+        f = (float) ( entityliving.bd * sidewaysMod );
 
         // NMS: set backMod
         f1 = entityliving.be;
